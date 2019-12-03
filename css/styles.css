@@ -6,7 +6,6 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  
 }
 
 h1 {
@@ -26,26 +25,33 @@ p {
   color: white;
 }
 
+header {
+  width: 100%;
+}
 
 .brand {
-  color: black;
-  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+.brand p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  margin: 0;
+  margin: 10px auto 0;
   font-size: 3rem;
 }
 
 .brand span {
   font-weight: 300;
-  
 }
 
 .hero-section {
   height: 100vh;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/bradley-dunn-9SGGun3iIig-unsplash.jpg");
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/images/bradley-dunn-9SGGun3iIig-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -65,14 +71,12 @@ p {
   font-size: 1.2rem;
   padding: 13px 35px;
   border-radius: 8px;
- 
 }
 
 .explore-btn:hover {
   color: black;
   background: white;
   border: 3px solid black;
-  
 }
 
 .girl {
@@ -82,6 +86,11 @@ p {
   right: 20%;
 }
 
+::selection {
+  background: #e0ebe8;
+  color: #545454;
+  text-shadow: none;
+}
 
 /* font-family: 'Open Sans', sans-serif;
 font-family: 'Poppins', sans-serif; */
