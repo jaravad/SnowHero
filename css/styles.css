@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   text-align: center;
+  --height: 100vh;
 }
 
 h1 {
@@ -17,12 +18,8 @@ h1 {
   color: white;
 }
 
-p {
-  font-size: 1.8rem;
-  min-width: 430px;
-  width: 45%;
-  margin: 50px auto;
-  color: white;
+h3 {
+  font-size: 2rem;
 }
 
 header {
@@ -34,7 +31,6 @@ header {
 .navigation {
   width: 40%;
   margin: 0 auto;
-  
 }
 
 .navigation ul {
@@ -83,24 +79,53 @@ header {
 }
 
 .hero-text {
-  padding-bottom: 100px;
+  padding-bottom: calc(var(--height) * 0.15);
+}
+
+.hero-p {
+  font-size: 1.8rem;
+  min-width: 430px;
+  width: 45%;
+  margin: 50px auto;
+  color: white;
 }
 
 .explore-btn {
   text-decoration: none;
   text-transform: uppercase;
-  background: #1b1b1b;
+  background-color: rgba(27, 27, 27, 1);
   color: white;
   font-weight: 600;
   font-size: 1.2rem;
   padding: 13px 35px;
   border-radius: 6px;
+  transition: background-color 0.3s;
 }
 
 .explore-btn:hover {
-  background: #313131;
+  background-color: rgba(27, 27, 27, 0.7);
 }
 
+.our-service-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: calc(var(--height) * 0.2);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.our-service-card {
+  width: 30%;
+  
+}
+
+.our-service-card img {
+  width: 30%;
+}
+
+.our-service-p {
+  font-size: 1.5rem;
+}
 
 ::selection {
   background: #e0ebe8;
