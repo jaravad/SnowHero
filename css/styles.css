@@ -1,11 +1,11 @@
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  text-align: center;
   --height: 100vh;
 }
 
@@ -16,6 +16,10 @@ h1 {
   margin: 0;
   display: inline-block;
   color: white;
+}
+
+h2 {
+  font-size: 4rem;
 }
 
 h3 {
@@ -51,6 +55,7 @@ header {
 
 .brand {
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .brand p {
@@ -76,6 +81,7 @@ header {
   background-size: cover;
   background-position: center;
   position: relative;
+  text-align: center;
 }
 
 .hero-text {
@@ -106,9 +112,12 @@ header {
   background-color: rgba(27, 27, 27, 0.7);
 }
 
-.our-service-container {
+.container {
   width: 80%;
   margin: 0 auto;
+}
+
+.our-service-container {
   margin-top: calc(var(--height) * 0.2);
   display: flex;
   justify-content: space-evenly;
@@ -116,7 +125,7 @@ header {
 
 .our-service-card {
   width: 30%;
-  
+  text-align: center;
 }
 
 .our-service-card img {
@@ -125,6 +134,46 @@ header {
 
 .our-service-p {
   font-size: 1.5rem;
+}
+
+#our-products {
+  text-align: center;
+}
+
+.our-products-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#our-products h2:nth-child(2) {
+  text-align: left;
+  font-weight: 300;
+}
+
+.our-products-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 22%;
+  height: calc(var(--height) * 0.5);
+  border-radius: 7px;
+  margin: 10px 0;
+}
+
+.our-products-card:nth-of-type(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/images/person-doing-snowboarding.jpg");
+}
+
+.our-products-card:nth-of-type(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/images/woman-snow-outfit.jpg");
+}
+
+.our-products-card:nth-of-type(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/images/man-wearing-blue-jacket.jpg");
 }
 
 ::selection {
