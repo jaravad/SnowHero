@@ -201,6 +201,7 @@ header {
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
   color: black;
+  position: relative;
 }
 
 .product-card:hover {
@@ -208,23 +209,27 @@ header {
 }
 
 .product-card img {
-  height: 70%;
-  padding-top: 20px;
+  width: 80%;
+  padding-top: 15px;
 }
 
 .name {
   font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 0;
-  margin-top: 15px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 40px;
 }
 
 .price {
   font-size: 1.4rem;
   font-weight: 400;
   color: grey;
-  margin-top: 5px;
-  margin-bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
 }
 
 ::selection {
