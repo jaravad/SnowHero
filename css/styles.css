@@ -105,7 +105,10 @@ header {
   font-size: 1.2rem;
   padding: 13px 35px;
   border-radius: 6px;
-  transition: background-color 0.3s;
+  /* transition and fallback transitions */
+  -moz-transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
 }
 
 .explore-btn:hover {
@@ -116,6 +119,8 @@ header {
   width: 80%;
   margin: 0 auto;
 }
+
+/* ------ our service section ------ */
 
 .our-service-container {
   margin-top: calc(var(--height) * 0.2);
@@ -136,13 +141,14 @@ header {
   font-size: 1.5rem;
 }
 
+/* ------ our products section ------ */
+
 #our-products {
   text-align: center;
 }
 
 .our-products-container {
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
 }
 
@@ -151,29 +157,74 @@ header {
   font-weight: 300;
 }
 
-.our-products-card {
+.our-products-container a {
+  width: calc(100% / 5);
+  height: calc(var(--height) * 0.5);
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+}
+
+.all-products-card {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 22%;
-  height: calc(var(--height) * 0.5);
-  border-radius: 7px;
-  margin: 10px 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("/images/low-angle-photography-of-man-wearing-blue-jacket-carrying-848607.jpg");
 }
 
-.our-products-card:nth-of-type(1) {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("/images/person-doing-snowboarding.jpg");
+.all-products-card span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.4);
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-.our-products-card:nth-of-type(2) {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("/images/woman-snow-outfit.jpg");
+.all-products-card:hover span {
+  opacity: 1;
 }
 
-.our-products-card:nth-of-type(3) {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("/images/man-wearing-blue-jacket.jpg");
+/* ------ products cards ------ */
+
+.product-card {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  -moz-transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  color: black;
+}
+
+.product-card:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  height: 70%;
+  padding-top: 20px;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: grey;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 ::selection {
@@ -182,5 +233,6 @@ header {
   text-shadow: none;
 }
 
-/* font-family: 'Open Sans', sans-serif;
+/*font-family: 'Karla', sans-serif;
+font-family: 'Open Sans', sans-serif;
 font-family: 'Poppins', sans-serif; */
