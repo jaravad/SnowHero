@@ -14,7 +14,6 @@ h1 {
   font-size: 7rem;
   line-height: 1.2;
   margin: 0;
-  display: inline-block;
   color: white;
 }
 
@@ -28,8 +27,9 @@ h3 {
 
 header {
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  /* position: fixed; */
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation {
@@ -56,9 +56,6 @@ header {
 .brand {
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.brand p {
   color: white;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -90,7 +87,6 @@ header {
 
 .hero-p {
   font-size: 1.8rem;
-  min-width: 430px;
   width: 45%;
   margin: 50px auto;
   color: white;
@@ -123,10 +119,10 @@ header {
 /* ------ our service section ------ */
 
 .our-service-container {
-  margin-top: calc(var(--height) * 0.2);
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .our-service-card {
@@ -143,15 +139,44 @@ header {
   font-size: 1.5rem;
 }
 
+.image-gallery {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.image-card {
+  flex: 1 calc(100% / 3);
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.image-card:nth-of-type(1) {
+  background-position: top center;
+  background-image: url("/images/david-schultz-11SF6RqgXXw-unsplash.jpg");
+}
+
+.image-card:nth-of-type(2) {
+  background-image: url("/images/person-wearing-blue-winter-jacket-carrying-snowboard-under-848612.jpg");
+}
+
+.image-card:nth-of-type(3) {
+  background-image: url("/images/man-wearing-overalls-holding-snowboard-standing-on-snow-1653419.jpg");
+}
 /* ------ our products section ------ */
 
 #our-products {
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .our-products-container {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 #our-products h2:nth-child(2) {
@@ -166,7 +191,7 @@ header {
   display: flex;
   text-decoration: none;
   font-family: "Karla", sans-serif;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(255, 255, 255);
   -moz-transition: background-color 0.4s;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
@@ -177,7 +202,7 @@ header {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.our-products-container a:first-of-type {
+/* .our-products-container a:first-of-type {
   padding: 0;
   flex-grow: 1;
   flex-basis: 20%;
@@ -201,7 +226,7 @@ header {
 
 .our-products-container a:first-of-type:hover span {
   opacity: 1;
-}
+} */
 
 /* ------ products cards ------ */
 
@@ -231,12 +256,49 @@ header {
   margin: 5px auto 0;
 }
 
+.view-all-btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid black;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: black;
+  border-radius: 0;
+  padding: 11px 35px;
+}
+
+.view-all-btn:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+}
+
 @media (max-width: 920px) {
-  .our-products-container a {
-    flex: 1 21%;
+  h1 {
+    font-size: 5rem;
   }
+
+  .hero-p {
+    font-size: 1.3rem;
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  .our-products-container a {
+    flex: 1 calc(100% / 3 - 12%);
+  }
+
+  .our-products-container a:nth-child(1),
+  .our-products-container a:nth-child(2) {
+    flex: 1 calc(100% / 2 - 8%);
+  }
+}
+
+@media (max-width: 600px) {
   .our-products-container a:first-of-type {
-    flex: 1 25%;
+    flex: 1 calc(100% - 4%);
+  }
+  .our-products-container a {
+    flex: 1 calc(100% / 2 - 8%);
   }
 }
 
