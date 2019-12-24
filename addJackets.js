@@ -7,7 +7,7 @@ let jackets = [
   { name: "Flicker", price: "$399" },
   { name: "Flint", price: "$399" },
   { name: "Frontier", price: "$399" },
-  { name: "Gala", price: "$399" },
+  { name: "Gala", price: "$120" },
   { name: "Greed Jacket", price: "$399" },
   { name: "Greenlight", price: "$399" },
   { name: "Haze Varsity", price: "$399" },
@@ -23,11 +23,18 @@ let jackets = [
   { name: "Victoria", price: "$399" }
 ];
 
-jackets.forEach(jacket => {
-  let productsContainer = document.getElementsByClassName(
-    "our-products-container"
-  );
+// Adding the HTML code to display the jackets:
+/* <a href="#"
+    ><div class="product-card">
+      <img src="/images/jackets/Greed_Jacket.png" alt="Greed Jacket" />
+      <h4 class="name">Greed Jacket</h4>
+      <h5 class="price">From $170</h5>
+    </div></a
+  > */
 
+let productsContainer = document.querySelector(".our-products-container");
+
+jackets.forEach(jacket => {
   let a = document.createElement("a");
   a.setAttribute("href", "#");
 
@@ -54,5 +61,5 @@ jackets.forEach(jacket => {
   productCard.appendChild(price);
   a.appendChild(productCard);
   console.log(a);
-  productsContainer[0].appendChild(a);
+  productsContainer.appendChild(a);
 });
