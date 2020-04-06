@@ -20,7 +20,7 @@ let jackets = [
   { name: "Sunset", price: "$399" },
   { name: "Tuscany", price: "$399" },
   { name: "Tuscany Pink", price: "$399" },
-  { name: "Victoria", price: "$399" }
+  { name: "Victoria", price: "$399" },
 ];
 
 // Adding the HTML code to display the jackets:
@@ -34,7 +34,7 @@ let jackets = [
 
 let productsContainer = document.querySelector(".our-products-container");
 
-jackets.forEach(jacket => {
+jackets.forEach((jacket) => {
   let a = document.createElement("a");
   a.setAttribute("href", "#");
 
@@ -44,9 +44,8 @@ jackets.forEach(jacket => {
   let img = document.createElement("img");
   img.setAttribute(
     "src",
-    "/images/jackets/" + jacket.name.replace(/ /g, "_") + ".png"
+    "./images/jackets/" + jacket.name.toLowerCase().replace(/ /g, "_") + ".png"
   );
-  img.setAttribute("alt", jacket.name);
 
   let name = document.createElement("h4");
   name.setAttribute("class", "name");
